@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Go Travel - Enlaces</title>
+    <!-- Fuente Google Fonts: Poppins (Moderna y limpia) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Colores de Marca Let's Go Travel */
+            --color-magenta: #D91A5F;
+            --color-orange: #F58220;
+            --color-green: #9DC456;
+            --bg-overlay: rgba(253, 253, 253, 0.85);
+            --text-dark: #222222;
+            --text-light: #555555;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eee;
+            /* Fondo con imagen de viajes (Playas/Aventura) */
+            background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), 
+                              url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px; 
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Efecto Glassmorphism para dar cuerpo */
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            min-height: 100vh;
+            box-shadow: 0 0 40px rgba(0,0,0,0.1);
+        }
+
+        /* --- Header y Logo --- */
+        .profile-container {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .logo-placeholder {
+            width: 140px;
+            height: 140px;
+            background-color: white;
+            border-radius: 50%; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            border: 5px solid white;
+            overflow: hidden;
+        }
+
+        .logo-img {
+            width: 85%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 15px;
+            color: var(--text-dark);
+            text-shadow: 0 2px 4px rgba(255,255,255,0.5);
+        }
+        
+        h1 span {
+            color: var(--color-magenta);
+        }
+
+        .tagline {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-top: 5px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        /* --- Botones --- */
+        .btn-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            background: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+        }
+
+        .btn-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-icon {
+            font-size: 20px;
+            width: 25px;
+        }
+
+        /* 1. Guardar Contacto */
+        .btn-contact {
+            background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-magenta) 100%);
+            color: white;
+            border: none;
+        }
+
+        /* 2. WhatsApp */
+        .btn-whatsapp {
+            color: #25D366;
+            border: 1.5px solid #25D366;
+        }
+        .btn-whatsapp:hover { background: #25D366; color: white; }
+
+        /* 3. Web */
+        .btn-web {
+            color: var(--color-green);
+            border: 1.5px solid var(--color-green);
+        }
+        .btn-web:hover { background: var(--color-green); color: white; }
+
+        /* 4. Facebook / Instagram */
+        .btn-social {
+            color: var(--text-dark);
+            border: 1.5px solid #ddd;
+        }
+        .btn-facebook:hover { border-color: #1877F2; color: #1877F2; }
+        .btn-instagram:hover { border-color: #E1306C; color: #E1306C; }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: auto;
+            padding-top: 40px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        footer a {
+            color: var(--color-magenta);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0; 
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="profile-container animate-in" style="animation-delay: 0.1s;">
+            <div class="logo-placeholder">
+                 <img src="logo.jpg" alt="Logo Let's Go Travel" class="logo-img"> 
+            </div>
+            <h1>Let's Go <span>Travel</span></h1>
+            <p class="tagline">¿A dónde quieres ir hoy? 🌎</p>
+        </header>
+
+        <div class="btn-wrapper">
+            
+            <a href="#" class="btn btn-contact animate-in" style="animation-delay: 0.2s;" onclick="descargarVcard()">
+                <div class="btn-content">
+                    <i class="fa-solid fa-user-plus btn-icon"></i>
+                    <span>Guardar Contacto</span>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="font-size: 12px; opacity: 0.7;"></i>
+            </a>
+
+            <a href="https://wa.me/524461056473" target="_blank" class="btn btn-whatsapp animate-in" style="animation-delay: 0.3s;">
+                <div class="btn-content">
+                    <i class="fa-brands fa-whatsapp btn-icon"></i>
+                    <span>WhatsApp Ventas</span>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="font-size: 12px; opacity: 0.7;"></i>
+            </a>
+
+             <a href="https://letsgotravelviajes.com/" target="_blank" class="btn btn-web animate-in" style="animation-delay: 0.4s;">
+                <div class="btn-content">
+                    <i class="fa-solid fa-plane-up btn-icon"></i>
+                    <span>Ver Promociones Web</span>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="font-size: 12px; opacity: 0.7;"></i>
+            </a>
+
+            <a href="https://www.facebook.com/agenciaLetsGo2travel" target="_blank" class="btn btn-social btn-facebook animate-in" style="animation-delay: 0.5s;">
+                <div class="btn-content">
+                    <i class="fa-brands fa-facebook-f btn-icon"></i>
+                    <span>Síguenos en Facebook</span>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="font-size: 12px; opacity: 0.7;"></i>
+            </a>
+
+            <a href="https://www.instagram.com/letsgo_2travel?igsh=ZGI0d2lhYnBvODFx" target="_blank" class="btn btn-social btn-instagram animate-in" style="animation-delay: 0.6s;">
+                <div class="btn-content">
+                    <i class="fa-brands fa-instagram btn-icon"></i>
+                    <span>Instagram</span>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="font-size: 12px; opacity: 0.7;"></i>
+            </a>
+
+        </div>
+
+        <footer class="animate-in" style="animation-delay: 0.7s;">
+            <p>© 2026 Let's Go Travel</p>
+            <!-- He actualizado el enlace de Vextli aquí -->
+            <p style="margin-top: 5px;">Tecnología NFC por <a href="https://vextli.github.io/VEXTLI/" target="_blank">Vextli</a></p>
+        </footer>
+
+    </div>
+
+    <script>
+        function descargarVcard() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+N:Travel;Let's Go;;;
+FN:Let's Go Travel
+ORG:Agencia de Viajes Let's Go Travel
+TEL;TYPE=CELL:+524461056473
+EMAIL:info@letsgotravelviajes.com
+URL:https://letsgotravelviajes.com/
+END:VCARD`;
+            const blob = new Blob([vcard], { type: "text/vcard" });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "Contacto_LetsGoTravel.vcf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
